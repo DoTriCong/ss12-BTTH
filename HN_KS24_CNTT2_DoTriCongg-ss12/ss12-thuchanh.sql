@@ -67,7 +67,7 @@ select
     d.DeptName
 from Student s
 join Department d on s.DeptID = d.DeptID;
-
+SELECT * FROM View_StudentBasic;
 -- CÂU 2: INDEX cho FullName
 create index idx_student_fullname on Student(FullName);
 
@@ -86,7 +86,7 @@ begin
     where d.DeptName = 'Information Technology';
 end //
 DELIMITER ;
-	
+	CALL GetStudentsIT();
 -- PHẦN B – KHÁ
 
 -- CÂU 4a: VIEW đếm sinh viên theo khoa
